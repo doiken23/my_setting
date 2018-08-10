@@ -32,11 +32,17 @@ endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
- call dein#begin('~/.cache/dein')
+if dein#load_state('~/.vim/dein')
+ call dein#begin('~/.vim/dein')
 
- call dein#add('~/.cache/dein')
- call dein#add('Shougo/deoplete.nvim')
+ " about toml file
+ let g:dein_dir = expand('~/.vim/dein')
+ let s:toml = g:dein_dir . '/dein.toml'
+ let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+
+ " plod toml file
+ call dein#load_toml(s:toml, {'lazy': 0})
+ call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
  " 自分のプラグイン
  call dein#add('scrooloose/nerdtree')
