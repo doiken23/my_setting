@@ -12,3 +12,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'tomasr/molokai'
