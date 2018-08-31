@@ -63,5 +63,8 @@ endif
 filetype plugin indent on
 syntax enable
 
+colorscheme molokai
+set t_Co=256
+
 "quickrn
 let g:quickrun_config = {}
