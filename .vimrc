@@ -64,7 +64,7 @@ filetype plugin indent on
 syntax enable
 set background=dark
 
-colorscheme monokai
+colorscheme molokai
 set t_Co=256
 
 "quickrn
