@@ -15,3 +15,9 @@ repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'jdkanani/vim-material-theme'
+
+[[plugins]]
+repo = 'KKPMW/moonshine-vim'
