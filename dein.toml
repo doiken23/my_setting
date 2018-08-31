@@ -9,3 +9,6 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
