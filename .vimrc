@@ -45,10 +45,6 @@ if dein#load_state('~/.vim/dein')
  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
  " 自分のプラグイン
- call dein#add('scrooloose/nerdtree')
- call dein#add('lervag/vimtex')
- call dein#add('thinca/vim-quickrun')
- call dein#add('tpope/vim-fugitive')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
