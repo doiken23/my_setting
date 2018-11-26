@@ -23,6 +23,7 @@ set shiftwidth=4
 set cursorline
 syntax on
 set number
+set ruler
 hi Comment ctermfg=blue
 
 " setting of dein.vim
@@ -64,8 +65,8 @@ filetype plugin indent on
 syntax enable
 set background=dark
 
-"colorscheme molokai
-colorscheme gruvbox
+colorscheme molokai
+"colorscheme gruvbox
 set t_Co=256
 
 "quickrn
