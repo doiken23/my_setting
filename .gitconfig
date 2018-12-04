@@ -1,7 +1,8 @@
 [user]
 	email = doi-kento-astro@g.ecc.u-tokyo.ac.jp
 	name = Doi Kento
-
 [alias]
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
     tree =  log --graph --oneline --decorate --all
+[color]
+	ui = true
