@@ -44,11 +44,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'davidhalter/jedi-vim'
+
+NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
 
-" Required:
-filetype plugin indent on
+" color scheme
+colorscheme molokai
+syntax enable
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
