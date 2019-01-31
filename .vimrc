@@ -67,6 +67,8 @@ set background=dark
 
 colorscheme molokai
 "colorscheme gruvbox
+"colorscheme moonshine_lowcontrast
+"colorscheme splatoon
 set t_Co=256
 
 "quickrn
