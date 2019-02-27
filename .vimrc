@@ -26,6 +26,9 @@ set number
 set ruler
 hi Comment ctermfg=blue
 
+" other settings
+set spell
+
 " setting of dein.vim
 if &compatible
  set nocompatible
@@ -65,11 +68,36 @@ filetype plugin indent on
 syntax enable
 set background=dark
 
-colorscheme molokai
+"colorscheme molokai
 "colorscheme gruvbox
 "colorscheme moonshine_lowcontrast
-"colorscheme splatoon
+colorschem dracula
 set t_Co=256
 
 "quickrn
 let g:quickrun_config = {}
+let g:quickrun_config['tex'] = {
+\   'command' : 'latexmk',
+\   'outputter' : 'error',
+\   'outputter/error/error' : 'quickfix',
+\   'cmdopt': '-pdfdvi',
+\   'exec': ['%c %o %s'],
+\ }
+
+" vimtex
+let g:vimtex_compiler_latexmk = {
+\ 'background': 1,
+\ 'build_dir': '',
+\ 'continuous': 1,
+\ 'options': [
+\    '-pdfdvi',
+\    '-verbose',
+\    '-file-line-error',
+\    '-synctex=1',
+\    '-interaction=nonstopmode',
+\],
+\}
+
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf @tex'

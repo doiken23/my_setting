@@ -24,3 +24,6 @@ repo = 'KKPMW/moonshine-vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'dracula/vim'
