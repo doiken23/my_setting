@@ -13,7 +13,7 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " tab and indent
 set expandtab
-set tabstop=4
+"set tabstop=4
 set softtabstop=4
 set autoindent
 set smartindent
@@ -68,13 +68,20 @@ filetype plugin indent on
 syntax enable
 set background=dark
 
-"colorscheme molokai
-"colorscheme gruvbox
-"colorscheme moonshine_lowcontrast
+" カラースキームの設定
 colorschem dracula
 set t_Co=256
 
-"quickrn
+" インデントラインの設定
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
+
+"quickrun
 let g:quickrun_config = {}
 let g:quickrun_config['tex'] = {
 \   'command' : 'latexmk',
@@ -98,6 +105,14 @@ let g:vimtex_compiler_latexmk = {
 \],
 \}
 
+" vimtexの設定
 let g:vimtex_view_general_viewer
       \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
+
+" pythonシンタックスの設定
+let g:python_highlight_all = 1
+
+" pythonのrename用のマッピングがquickrunとかぶるため回避させる
+let g:jedi#rename_command = ""
+let g:jedi#documentation_command = ""

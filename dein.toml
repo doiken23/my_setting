@@ -2,6 +2,9 @@
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
 repo = 'lervag/vimtex'
 
 [[plugins]]
@@ -13,6 +16,13 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+# color scheme
 [[plugins]]
 repo = 'tomasr/molokai'
 
@@ -27,3 +37,6 @@ repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'dracula/vim'
+
+[[plugins]]
+repo = 'MidnaPeach/neonwave.vim'
