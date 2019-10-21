@@ -1,4 +1,4 @@
-" showing
+" showin
 set number
 set cursorline
 set virtualedit=onemore
@@ -47,12 +47,14 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'davidhalter/jedi-vim'
 
 NeoBundle 'tomasr/molokai'
+NeoBundle 'dracula/vim'
 
 call neobundle#end()
 
 " color scheme
-colorscheme molokai
+colorscheme dracula
 syntax enable
+set t_Co=256
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
