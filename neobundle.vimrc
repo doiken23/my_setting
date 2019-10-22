@@ -45,6 +45,11 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'w0rp/ale'
+NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tomasr/molokai'
 NeoBundle 'dracula/vim'
@@ -55,6 +60,33 @@ call neobundle#end()
 colorscheme dracula
 syntax enable
 set t_Co=256
+
+" インデントラインの設定
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
+
+" python syntax
+let g:python_highlight_command = ""
+
+" ale tool
+let g:ale_linters = {
+    \   'python': ['flake8'],
+    \}
+let g:ale_fixers = {
+    \   'python': ['autopep8']
+    \}
+
+" vim-gitgutter
+if exists('&signcolumn')
+    set signcolumn=yes
+else
+    let g:gitgutter_sign_column_always = 1
+endif
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
