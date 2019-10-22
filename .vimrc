@@ -116,3 +116,19 @@ let g:python_highlight_all = 1
 " pythonのrename用のマッピングがquickrunとかぶるため回避させる
 let g:jedi#rename_command = ""
 let g:jedi#documentation_command = ""
+
+" ale tool についての設定
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+let g:ale_fixers = {
+    \ 'python': ['autopep8'],
+    \ }
+
+" vim-gitgutter についての設定
+" " 目印行を常に表示する
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif

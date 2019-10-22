@@ -22,6 +22,12 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
 # color scheme
 [[plugins]]
 repo = 'tomasr/molokai'
