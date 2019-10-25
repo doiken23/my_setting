@@ -43,6 +43,10 @@ repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'dracula/vim'
+name = 'dracula'
 
 [[plugins]]
 repo = 'MidnaPeach/neonwave.vim'
+
+[[plugins]]
+repo = 'challenger-deep-theme/vim'
