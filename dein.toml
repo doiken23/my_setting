@@ -28,6 +28,12 @@ repo = 'w0rp/ale'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
+[[plugins]]
+repo = 'iamcco/mathjax-support-for-mkdp'
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.vim'
+
 # color scheme
 [[plugins]]
 repo = 'tomasr/molokai'
