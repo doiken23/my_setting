@@ -1,3 +1,14 @@
+# python
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
+hook_add = '''
+    # https://yskma.hatenablog.com/entry/2018/06/28/001936
+    # ドット入力時に補完候補を表示しない
+    let g:jedi#popup_on_dot = 0
+'''
+
+# tex
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex']
