@@ -34,6 +34,11 @@ repo = 'iamcco/mathjax-support-for-mkdp'
 [[plugins]]
 repo = 'iamcco/markdown-preview.vim'
 
+# vimでペーストする時に自動的にペーストモードにする
+# https://qiita.com/ryoff/items/ad34584e41425362453e
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
 # color scheme
 [[plugins]]
 repo = 'tomasr/molokai'
