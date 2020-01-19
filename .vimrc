@@ -69,7 +69,7 @@ syntax enable
 set background=dark
 
 " カラースキームの設定
-colorschem dracula
+colorscheme challenger_deep
 set t_Co=256
 
 " インデントラインの設定
@@ -116,6 +116,8 @@ let g:python_highlight_all = 1
 " pythonのrename用のマッピングがquickrunとかぶるため回避させる
 let g:jedi#rename_command = ""
 let g:jedi#documentation_command = ""
+" Ctrl+fで補完候補を表示
+let g:jedi#completions_command = "<C-f>"
 
 " ale tool についての設定
 let g:ale_linters = {
