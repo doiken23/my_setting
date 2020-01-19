@@ -111,10 +111,11 @@ SAVEHIST=100000
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## .bashrcから引き継いだ設定
+## .bashrcから引き継いだ設定
 # パスの追加
-\export PATH="/usr/local/bin:$PATH"
-\export PATH="~/.local/bin:$PATH"
-\export PATH="/Users/doiken/anaconda3/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/Users/doiken/.local/bin:$PATH"
+export PATH="/Users/doiken/anaconda3/bin:$PATH"
 
 # "-F":ディレクトリに"/"を表示 / "-G"でディレクトリを色表示
 alias ls='ls -FG'
@@ -126,3 +127,24 @@ HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 
 # the fuck コマンドを追加
 eval "$(thefuck --alias)"
+
+# log in メッセージを表示
+pyfiglet COMPUTER VISION | lolcat >&2
+
+# prevent from the "zsh no matches found" error
+setopt nonomatch
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/doiken/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/doiken/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/doiken/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/doiken/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
